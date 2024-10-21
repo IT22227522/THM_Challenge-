@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Examination Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(R.page.jpg);
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            gap: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .Footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+             transition: 0.5s;
+
+        }
+        .Footer h4 {
+             margin-bottom: 25px;
+             margin-top: 600;
+        }
+
+        .Footer:hover {
+              box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        }
+        .icons {
+            color: #f44336;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+            transition: 0.5s;
+        }
+        .icons:hover {
+            box-shadow: 0 0 20px 0px #57c6da;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <form action="submit_contact_form.php" method="post">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <section class="Footer">
+        <h4> About Us</h4>
+        <p>Follow Us in Social Media and Get to know about us more</p>
+        <div class="icons">
+            <img src="facebook.png" height="30px" width="30px">
+           <img src="instagram.png" height="30px" width="30px">
+           <img src="twitter.png" height="30px" width="30px">
+           <img src="googleplus.png" height="30px" width="30px">
+        </div>
+        <p> Made with Ahmed Naweedh </p>
+        <p> Y2S2 Cyber </p>
+        <p> WS Assesment </p>
+    </section>
+</body>
+</html>

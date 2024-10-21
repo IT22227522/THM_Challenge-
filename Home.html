@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <title>Home Page</title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav img {
+    width: 150px;
+}
+.nav-linksk {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block; /*horizontal*/
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1 {
+    font-size: 62px;
+}
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa {
+    display: none;
+}
+
+
+/*---------------- aboutus ----------------*/
+
+.aboutus {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-size: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.aboutus-col {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.aboutus-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+
+}
+/*---------------- specialfeatures-----------*/
+
+.specialfeatures {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.specialfeatures-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.specialfeatures-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.specialfeatures-col h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+/*-----------Footer--------*/
+
+.Footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+}
+.Footer h4 {
+    margin-bottom: 25px;
+    margin-top: 600;
+}
+
+.icons {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transition: 0.5s;
+}
+.icons:hover {
+    box-shadow: 0 0 20px 0px #57c6da;
+}
+    </style>
+  </head>
+  <body>
+    <section class="header">
+        <nav>
+            <img src="logo 2.png" height="50px width="50px">
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li>Home</li>
+                    <li><a href="login.html">Log In </a></li>
+                    <li><a href="Resourse.html"> Resources</a></li>
+                    <li><a href="blog.html"> Blog</a></li>
+                    <li><a href="Contact.html"> Contact</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+ <div class="text-box">
+    <h1> Online Examination For Employee </h1>
+    <a href="Register.html" class="hero-btn">Create a New Account </a>
+ </div>
+    </section>
+
+
+<!------- About Us-------->
+    <section class="aboutus">
+        <h1>About Us</h1>
+        <p>Our System offers a seamless solution for online assessments with a user friendly interface.<br>We provide a wide range of examinations for every job role that you prefer to take in the company,through a quiz that you take employers are able to test your knowledge before taking the exam.The students can attempt at their own convenience in this portal.</p>
+
+        <div class="row">
+            <div class="aboutus-col">
+                <h3>Multiple Choice Questions</h3>
+                <p>Excellent tool to access student knowledge as it provides a list of possible answers.</p>
+            </div>
+            <div class="aboutus-col">
+                <h3>Resources</h3>
+                <p>The videos and articles provided are effective and a useful material while preparing for the test.</p>
+            </div>
+            <div class="aboutus-col">
+                <h3>Feedback and immediate result generation</h3>
+                <p>The managers will be able to give you a quick update on how you performed in the exam this informs if you have been selected for the vacant position.</p>
+            </div>
+        </div>
+    </section>
+
+<!-------------specificfeatures --------->
+
+<section class="specialfeatures">
+    <h1>Special Features </h1>
+
+    <div class="row">
+        <div class="specialfeatures">
+            <img src="london.png" `height="50%" width="50%">
+            <h3>Accessibility</h3>
+        </div>
+        <div class="specialfeatures">
+            <img src="newyork.png" `height="50%" width="50%">
+            <h3> Time / Cost Efficiency</h3>
+        </div>
+        <div class="specialfeatures">
+            <img src="washington.png" `height="50%" width="50%">
+            <h3>Score</h3>
+        </div>
+    </div>
+</section>
+
+<!-------------Footer----------->
+
+<section class="Footer">
+    <p>Follow Us in Social Media and Get to know about us more</p>
+    <div class="icons">
+        <img src="facebook.png" height="30px" width="30px">
+       <img src="instagram.png" height="30px" width="30px">
+       <img src="twitter.png" height="30px" width="30px">
+       <img src="googleplus.png" height="30px" width="30px">
+    </div>
+    <p> Made with Ahmed Naweedh </p>
+    <p> Y2S2 Cyber </p>
+    <p> WS Assesment </p>
+</section>
+  </body>
+</html>

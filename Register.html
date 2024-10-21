@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --clr: #0ab3ff;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+	background: url('R.page.jpg') no-repeat;
+	background-size: cover;
+    background-position: center;	
+}
+
+form{
+    background:	transparent;
+	border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 60px 80px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form h2 {
+    color: #999;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+}
+
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+    height: 20px;
+
+}
+
+.inputBox input
+{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    color: #1f1a1a;
+    font-size: 1em;
+    letter-spacing: 0.15em;
+
+}
+
+
+
+.inputBox > label
+{
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+}
+
+.inputBox > input:focus ~ label,
+.inputBox>input:valid~ label
+{
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px); 
+}
+
+.inputBox input:focus,
+.inputBox input:valid
+{
+    border-bottom: 2px solid var(--clr);
+}
+
+.inputBox label 
+{
+    position :absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events:none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.inputBox input[type="submit"]
+{
+    background: var(--clr);
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    color: #1c2630;
+    font-weight: 600;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputBox input[type="submit"]:hover
+{
+    letter-spacing: 0.35em;
+}
+
+form p {
+    color: #fff;
+    text-transform:uppercase;
+}
+
+form p a {
+    color: var(--clr);
+    font-weight: 500;
+    text-decoration: none;
+}
+.error
+{
+	color:red;
+	
+}
+    </style>
+</head>
+
+<body>
+    <form id="registrationForm">
+        <h2>Register Account</h2>
+        <div class="inputBox">
+            <input id="username" type="text" required />
+            <label >First Name</label>
+        </div>
+        <div class="inputBox">
+            <input id="username" type="text" required />
+            <label >Last Name</label>
+        </div>
+        <div class="inputBox">
+            <input id="username" type="text" required />
+            <label >User Name</label>
+        </div>
+        <div class="inputBox">
+            <input id="email" type="text" required />
+            <label >Email</label>
+        </div>
+		
+        <div class="inputBox">
+            <input id="NICnumber" type="text" required />
+            <label >NIC</label>
+        </div>
+
+        <div class="inputBox">
+            <input id="password" type="password" required />
+            <label for="">Create Password</label>
+        </div>
+        <div class="inputBox">
+            <input  id="confirmPassword" type="password" required />
+            <label for="">Confirm Password</label>
+        </div>
+		<span id="message" class="error"></span> 
+		
+        <div class="inputBox">
+            <input type="submit" value="create" />
+           <a href="login.html"></a>
+
+        </div>
+    </form>
+    <script>
+        let label = document.querySelectorAll('label').forEach(label => {
+            label.innerHTML = label.innerText.split('').map((letter, i) => `<span style="transition-delay: ${i * 50}ms">${letters}</span>`).join('');
+        })
+    </script>
+	
+	   <script>
+	   
+        document.getElementById("registrationForm").onsubmit = function (e) {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var message = document.getElementById("message");
+
+            if (password !== confirmPassword) {
+                message.innerHTML = "Passwords do not match!";
+                e.preventDefault(); // Prevent form submission
+            } else {
+                message.innerHTML = ""; // Clear the error message
+            }
+        };
+    </script>
+</body>
+
+</html>
